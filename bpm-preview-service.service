@@ -1,0 +1,16 @@
+[Unit]
+Description=bpm-preview-service - convert BPMN XML to images
+Documentation=
+After=network.target
+
+[Service]
+Environment=NODE_ENV=production
+Type=simple
+User=daemon
+Group=daemon
+ExecStart=/usr/bin/node /opt/bpm-preview-service/build/index.js
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
