@@ -19,7 +19,7 @@ install:
 	cp -r ./node_modules ${DEST_DIR}/
 	cp -r ./build ${DEST_DIR}/
 	cp ./package.json ${DEST_DIR}/
-	systemctl stop bpm-preview-service.service
+	systemctl stop bpm-preview-service.service || true
 	install -Dm644 bpm-preview-service.service ${SERVICEDIR_SYSTEMD}/bpm-preview-service.service
 	systemctl daemon-reload
 	systemctl enable bpm-preview-service.service
