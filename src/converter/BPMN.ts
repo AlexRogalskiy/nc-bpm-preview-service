@@ -29,13 +29,13 @@ export default class BPMN implements ConverterInterface {
                 fs.unlink(inputFile, err => err && console.warn(err));
                 fs.unlink(outputFile, err => err && console.warn(err));
             });
-        }).catch(() => {
+        }).catch((err: Error) => {
             fs.unlink(inputFile, () => { });
 
-            console.log('XML could not be parsed');
+            console.log('Could not convert file: ' + err.toString());
 
-            res.status(400).json({
-                message: 'XML could not be parsed',
+            res.status(500).json({
+                message: err.toString(),
             });
         });
     }
