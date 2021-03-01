@@ -48,6 +48,15 @@ MIME type as Accept header. The default return type is svg.
 If the server is not able to generate a preview or the headers are invalid, it
 will respond with the appropriate HTTP status code.
 
+## Troubleshooting
+If you have issues connected to puppeteer and the used headless browser, check
+out their [troubleshooting
+guide](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md).
+One of the main issues on Debian based server systems are missing dependencies
+which you can install by executing the following:
+
+  $ apt install libpangocairo-1.0-0 libx11-xcb1 libxcomposite1 libxcursor1 libxdamage1 libxi6 libxtst6 libnss3 libcups2 libxss1 libxrandr2 libgconf2-4 libasound2 libatk1.0-0 libgtk-3-0
+
 [Node]: https://nodejs.org/en/
 [Yarn]: https://yarnpkg.com
 [make]: https://www.gnu.org/software/make/manual/make.html
