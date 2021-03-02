@@ -1,5 +1,6 @@
 import BPMN from "./BPMN";
 import { ConverterInterface } from "./ConverterInterface";
+import DMN from "./DMN";
 
 
 class ConverterManager {
@@ -21,5 +22,6 @@ class ConverterManager {
 const converterManager = new ConverterManager();
 
 converterManager.register(new BPMN());
+converterManager.register(new DMN());
 
 export default converterManager;
