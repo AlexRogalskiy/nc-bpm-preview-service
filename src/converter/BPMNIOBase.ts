@@ -16,8 +16,6 @@ export default abstract class BPMNIOBase implements ConverterInterface {
 
         fs.writeFileSync(inputFile, content);
 
-        console.log({inputFile, outputFile})
-
         convertAll([{
             input: inputFile,
             outputs: [outputFile]
