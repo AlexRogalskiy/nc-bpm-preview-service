@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "bpmn-to-image": "sualko/bpm-to-image#2af53f4c2fdd9291de63677bac2de32674d1a448",
+    "bpmn-to-image": "sualko/bpm-to-image#078a6ca8d3702f523865ee75a8e64838bf86a709",
     "express": "^4.17.1",
     "fast-xml-parser": "^3.18.0",
     "temp": "^0.9.4"
